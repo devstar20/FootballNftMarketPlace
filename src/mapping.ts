@@ -89,7 +89,7 @@ export function handlePiecePurchased(event: PiecePurchased): void {
   let seller = entity.seller
   let price = entity.price
   let existingAmount = entity.amount;
-  entity.amount = existingAmount - BigInt.fromI32(existingAmount)
+  entity.amount = existingAmount.minus(event.params.amount)
   entity.save()
 
   // trading history entity

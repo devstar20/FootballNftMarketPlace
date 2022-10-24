@@ -17,7 +17,7 @@ export class OfferEntity extends Entity {
     this.set("id", Value.fromString(id));
 
     this.set("offerId", Value.fromBigInt(BigInt.zero()));
-    this.set("timeStamp", Value.fromBigInt(BigInt.zero()));
+    this.set("timestamp", Value.fromBigInt(BigInt.zero()));
     this.set("collection", Value.fromBytes(Bytes.empty()));
     this.set("tokenId", Value.fromBigInt(BigInt.zero()));
     this.set("price", Value.fromBigInt(BigInt.zero()));
@@ -59,13 +59,13 @@ export class OfferEntity extends Entity {
     this.set("offerId", Value.fromBigInt(value));
   }
 
-  get timeStamp(): BigInt {
-    let value = this.get("timeStamp");
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
     return value!.toBigInt();
   }
 
-  set timeStamp(value: BigInt) {
-    this.set("timeStamp", Value.fromBigInt(value));
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
   }
 
   get collection(): Bytes {
