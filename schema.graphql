@@ -1,7 +1,7 @@
 type OfferEntity @entity {
   id: ID!
   offerId: BigInt!
-  timeStamp: BigInt!
+  timestamp: BigInt!
   collection: Bytes! # address
   tokenId: BigInt!
   price: BigInt!

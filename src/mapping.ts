@@ -41,7 +41,7 @@ export function handleOfferClosed(event: OfferClosed): void {
    let tradHisEntity = new TradeHistoryEntity(tradHisEntityId)
    tradHisEntity.offerId = event.params.offerID
    tradHisEntity.timestamp = event.block.timestamp
-   tradHisEntity.txHash = event.transaction.hash.toHexString()
+   tradHisEntity.txhash = event.transaction.hash.toHexString()
    tradHisEntity.eventName = "closeOffer"
    tradHisEntity.collection = event.params.collectionId
    tradHisEntity.tokenId = event.params.pieceID
@@ -66,7 +66,7 @@ export function handleOfferCreated(event: OfferCreated): void {
   let tradHisEntity = new TradeHistoryEntity(tradHisEntityId)
   tradHisEntity.offerId = event.params.offerIndex
   tradHisEntity.timestamp = event.block.timestamp
-  tradHisEntity.txHash = event.transaction.hash.toHexString()
+  tradHisEntity.txhash = event.transaction.hash.toHexString()
   tradHisEntity.eventName = "newOffer"
   tradHisEntity.collection = event.params.collectionId
   tradHisEntity.tokenId = event.params.pieceID
@@ -97,7 +97,7 @@ export function handlePiecePurchased(event: PiecePurchased): void {
   let tradHisEntity = new TradeHistoryEntity(tradHisEntityId)
   tradHisEntity.offerId = event.params.offerIndex
   tradHisEntity.timestamp = event.block.timestamp
-  tradHisEntity.txHash = event.transaction.hash.toHexString()
+  tradHisEntity.txhash = event.transaction.hash.toHexString()
   tradHisEntity.eventName = "purchaseNft"
   tradHisEntity.collection = event.params.collectionId
   tradHisEntity.tokenId = event.params.pieceID
