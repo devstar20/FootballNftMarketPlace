@@ -1,0 +1,30 @@
+type OfferEntity @entity {
+  id: ID!
+  offerId: BigInt!
+  timeStamp: BigInt!
+  collection: Bytes! # address
+  tokenId: BigInt!
+  price: BigInt!
+  amount: BigInt!
+  seller: Bytes! # address
+}
+
+type WCollectionEntity @entity {
+  id: ID!
+  timestamp: BigInt!
+  collection: Bytes!
+}
+
+type TradeHistoryEntity @entity {
+  id: ID!
+  offerId: BigInt!
+  timestamp: BigInt!
+  txhash: String!
+  eventName: String!
+  collection: Bytes!
+  tokenId: BigInt!
+  seller: Bytes
+  buyer: Bytes
+  price: BigInt
+  amount: BigInt!
+}
